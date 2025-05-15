@@ -1,0 +1,1 @@
+n this project, we use Hibernate ORM to map Java entities to a MySQL relational database using various types of relationships. These mappings follow standard JPA annotations to define how entities relate to each other. Here's a summary of the key relationship types used:

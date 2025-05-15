@@ -5,7 +5,6 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
  >  One-to-One (@OneToOne)
 
        > Represents a one-to-one relationship between two entities.
-
        > Each row in one table corresponds to exactly one row in another table.
        
  EX : Typically used for entities that share the same lifecycle (e.g., User ↔ UserProfile).
@@ -18,7 +17,6 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
   >  One-to-Many (@OneToMany) & Many-to-One (@ManyToOne)
  
        > Represents a parent-child relationship where one entity is related to many others.
-
        > In database terms, the "many" side has a foreign key to the "one" side.
 
    Ex: Annotated on the parent side with @OneToMany and on the child side with @ManyToOne.
@@ -34,9 +32,9 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
 
    >  Many-to-Many (@ManyToMany)
 
-       >  Represents a relationship where many entities can be related to many others.
-       >  Requires a join table in the database to manage the association.
-       >  Bidirectional or unidirectional mapping supported.
+       > Represents a relationship where many entities can be related to many others.
+       > Requires a join table in the database to manage the association.
+       > Bidirectional or unidirectional mapping supported.
   Ex:
       @ManyToMany
       @JoinTable(
@@ -49,8 +47,8 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
 
 Summary :
 
-      > Relation Type	Annotation	DB Implementation	Example
-      > One-to-One	@OneToOne	Foreign Key	User ↔ UserProfile
-      > One-to-Many	@OneToMany	Foreign Key (on Many)	User → Repositories
-      > Many-to-One	@ManyToOne	Foreign Key (on Many)	Repository → User
-      > Many-to-Many	@ManyToMany	Join Table	Repository ↔ Stargazers (Users)
+     > Relation Type	Annotation	DB Implementation	Example
+     > One-to-One	@OneToOne	Foreign Key	User ↔ UserProfile
+     > One-to-Many	@OneToMany	Foreign Key (on Many)	User → Repositories
+     > Many-to-One	@ManyToOne	Foreign Key (on Many)	Repository → User
+     > Many-to-Many	@ManyToMany	Join Table	Repository ↔ Stargazers (Users)

@@ -47,8 +47,7 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
 
 Summary :
 
-     Relation_Type	  Annotation   DB_Implementation	     Example
-    > One-to-One	    @OneToOne	   Foreign Key	             User ↔ UserProfile
-    > One-to-Many	   @OneToMany	  Foreign Key (on Many)	   User → Repositories
-    > Many-to-One	   @ManyToOne	  Foreign Key (on Many)	   Repository → User
-    > Many-to-Many	  @ManyToMany	 Join Table	              Repository ↔ Stargazers (Users)
+One-to-One	@OneToOne	Foreign Key	User ↔ UserProfile
+One-to-Many	@OneToMany	Foreign Key (on Many)	User → Repositories
+Many-to-One	@ManyToOne	Foreign Key (on Many)	Repository → User
+Many-to-Many	@ManyToMany	Join Table	Repository ↔ Stargazers (Users)

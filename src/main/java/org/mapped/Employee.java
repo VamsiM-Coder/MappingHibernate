@@ -11,7 +11,7 @@ public class Employee {
     private String empName;
     private Double empSalary;
     private String department;
-    private String laptop;
+    private Laptop laptop;
 
     public String getDepartment() {
         return department;
@@ -19,14 +19,6 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
-    }
-
-    public String getEmpName() {
-        return empName;
-    }
-
-    public void setEmpName(String empName) {
-        this.empName = empName;
     }
 
     public int getEmpId() {
@@ -37,12 +29,12 @@ public class Employee {
         this.empId = empId;
     }
 
-    public String getLaptop() {
-        return laptop;
+    public String getEmpName() {
+        return empName;
     }
 
-    public void setLaptop(String laptop) {
-        this.laptop = laptop;
+    public void setEmpName(String empName) {
+        this.empName = empName;
     }
 
     public Double getEmpSalary() {
@@ -53,6 +45,14 @@ public class Employee {
         this.empSalary = empSalary;
     }
 
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -60,7 +60,7 @@ public class Employee {
                 ", empId=" + empId +
                 ", empName='" + empName + '\'' +
                 ", empSalary=" + empSalary +
-                ", laptop='" + laptop + '\'' +
+                ", laptop=" + laptop +
                 '}';
     }
 }

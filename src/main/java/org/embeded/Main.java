@@ -1,4 +1,4 @@
-package org.mapped;
+package org.embeded;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -30,7 +30,7 @@ public class Main {
         emp2.setEmpName("John Snow");
         emp2.setEmpSalary(64000.57);
         emp2.setDepartment("Business Executive");
-
+        emp2.setLaptop(laptop2);
 
         SessionFactory sf = new Configuration()
                 .addAnnotatedClass(Employee.class)

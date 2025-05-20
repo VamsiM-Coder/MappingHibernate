@@ -1,14 +1,17 @@
-package org.mapped;
+package org.onetoone;
 
-import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-@Embeddable
-public class Laptop {
+@Entity
+public class Laptop1 {
 
-    int lid;
-    String lname;
-    String model;
+    @Id
+    private int lid;
+    private String lname;
+    private String model;
 
+    // Getters and setters
     public int getLid() {
         return lid;
     }
@@ -35,7 +38,7 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "Laptop{" +
+        return "Laptopp{" +
                 "lid=" + lid +
                 ", lname='" + lname + '\'' +
                 ", model='" + model + '\'' +

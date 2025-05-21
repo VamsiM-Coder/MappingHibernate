@@ -4,7 +4,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+// If we didn't used mapped by in both the entities they both think my responsibility to mapping
+// So 4 tables are created.
+// By using mapped by  field we can mapp using 3 tables only.
 import java.util.Arrays;
 
 public class MainN {
@@ -77,8 +79,13 @@ public class MainN {
         session.persist(emp3);
         session.persist(emp4);
 
+
+
         txn.commit();
+
+
         session.close();
         sf.close();
+
     }
 }

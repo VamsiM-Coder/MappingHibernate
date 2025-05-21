@@ -48,4 +48,14 @@ public class LaptopN {
     public void setEmployees(List<EmployeeN> employees) {
         this.employees = employees;
     }
+
+    @Override
+    public String toString() {
+        return "LaptopN{" +
+                "employees=" + employees +
+                ", lid=" + lid +
+                ", lname='" + lname + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

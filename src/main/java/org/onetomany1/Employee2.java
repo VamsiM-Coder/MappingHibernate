@@ -15,7 +15,7 @@ public class Employee2 {
     private Double empSalary;
     private String department;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany//(cascade = CascadeType.ALL)
     private List<Laptop2> laps;
 
     public String getDepartment() {
@@ -69,3 +69,5 @@ public class Employee2 {
                 '}';
     }
 }
+
+

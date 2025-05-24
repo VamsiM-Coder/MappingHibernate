@@ -1,4 +1,4 @@
-package org.manytomany;
+package Rel.manytomany;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

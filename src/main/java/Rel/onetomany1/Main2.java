@@ -1,4 +1,4 @@
-package org.onetomany1;
+package Rel.onetomany1;
 // It results 3 tables one laptop,employee and laptop_employee
 
 import org.hibernate.Session;

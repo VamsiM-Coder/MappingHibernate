@@ -1,4 +1,4 @@
-package org.manytomany;
+package Rel.manytomany;
 
 import jakarta.persistence.*;
 import java.util.List;

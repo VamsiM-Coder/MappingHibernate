@@ -1,6 +1,5 @@
-package org.onetomany1;
+package Rel.onetomany1;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;

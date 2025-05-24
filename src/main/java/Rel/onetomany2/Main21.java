@@ -1,4 +1,4 @@
-package org.onetomany2;
+package Rel.onetomany2;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

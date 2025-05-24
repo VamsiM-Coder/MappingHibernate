@@ -1,4 +1,4 @@
-package org.onetoone;
+package Rel.onetoone;
 
 
 import org.hibernate.Session;

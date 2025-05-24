@@ -1,4 +1,4 @@
-package org.embeded;
+package Rel.embeded;
 
 import jakarta.persistence.Embeddable;
 

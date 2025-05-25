@@ -1,11 +1,14 @@
 package eagerlazyfetch;
 
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -69,10 +72,24 @@ public class Main {
         Session session1 = sf.openSession();
 
         Alien a5 = session1.get(Alien.class, 101);
-//        System.out.println(a5);
+        System.out.println(a5);
         session1.close();
         sf.close();
+        // In the same session we insert and get the data hibernate uses caching concept
+        // It directly retrieve info from session not interact with DB
+        // If some changes happen then we retrieve data ,problem may come to avoid this get the data in different session.
 
+        // Lazy Fetching and Eager Fetching
+        // Lazy fetching get data only Alien entity not Laptop entity doesn't join the tables
+        // If we want it we want to explicitly print the result then lazy fetch write a query with join Laptop entity with Alien.
+        // Defaultly hibernate fetch data type Lazy.
+        //@OneToMany
+        //private List<Laptop> laptops;
+
+        // Eager Fetching is useful while retreiving the query we want the get full query with alien and laptop we go for this fetching
+        //  we explicitly mention this in ALien entity oneToMany Annotation by (fetch = FetchType.Eager)
+        //  @OneToMany(fetch = FetchType.EAGER)
+        //    private List<Laptop> laptops;
 
     }
 

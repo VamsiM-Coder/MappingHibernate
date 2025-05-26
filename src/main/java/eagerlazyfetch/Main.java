@@ -1,14 +1,11 @@
 package eagerlazyfetch;
 
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,7 +48,7 @@ public class Main {
         SessionFactory sf = new Configuration()
                 .configure()
                 .addAnnotatedClass(eagerlazyfetch.Alien.class)
-                .addAnnotatedClass(eagerlazyfetch.Laptop.class)
+                .addAnnotatedClass(Laptop.class)
                 .buildSessionFactory();
 
         Session session = sf.openSession();

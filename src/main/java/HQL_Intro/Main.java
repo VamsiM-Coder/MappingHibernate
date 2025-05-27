@@ -55,15 +55,41 @@ public class Main {
         List<Laptop> laps = query.getResultList();
         System.out.println(laps);
 
-        // Fetching entities by conditions
+//        // Fetching entities by conditions
         Query<Laptop> query2 = session.createQuery("from HQL_Intro.Laptop WHERE ram = 8");
         List<Laptop> laps2 = query2.getResultList();
         System.out.println(laps2);
 
-        //Agregation
-        Query<Laptop> query3 = session.createQuery("select count(*) from HQL_Intro.Laptop");
+//        // To pass data internally in query
+        Query query3 = session.createQuery("from HQL_Intro.Laptop where brand like 'HP'");
         List<Laptop> laps3 = query3.getResultList();
         System.out.println(laps3);
+
+
+        // To pass data externally in query (single)
+        String brand  = "Asus";
+        Query query4 = session.createQuery("from HQL_Intro.Laptop where brand like ?1");
+        query4.setParameter(1, brand);
+        List<Laptop> laps4 = query4.getResultList();
+        System.out.println(laps4);
+
+        // To pass data externally in query (double)
+        String brand2 = "HP";
+        int ram = 32;
+        Query query5 = session.createQuery("select model from HQL_Intro.Laptop where brand = ?1  and ram = ?2");
+        // If you remove 1 or 2 it shows unlabeled ordinal parameter.
+
+        query5.setParameter(1, brand2);
+        query5.setParameter(2, ram);
+        List<String> laps5 = query5.getResultList();
+        System.out.println(laps5);
+
+        //Aggregation
+        Query<Laptop> query6 = session.createQuery("select count(*) from HQL_Intro.Laptop");
+        List<Laptop> laps6 = query6.getResultList();
+        System.out.println(laps6);
+
+
 
         session.close();
         sf.close();

@@ -5,7 +5,18 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-// Employee Embedding Relationship with Laptop table.
+
+//Use @Embeddable for small, reusable data types.
+//✅ Use @Embedded in the owning entity to store its fields in the same table.
+//✅ If you need a relationship between two entities, use @OneToOne, @OneToMany, or @ManyToOne, not embedding.
+
+
+//Embedded types share the table of the owning entity.
+//They cannot have relationships (like @OneToMany) inside them. If you need relationships, you’d typically model those with @Entity and proper relationships (@OneToMany, @ManyToOne, etc.).
+//        Embedded types don’t have their own identity or primary key.
+
+
+//// Employee Embedding Relationship with Laptop table.
 public class Main {
     public static void main(String[] args) {
         Laptop laptop1 = new Laptop();

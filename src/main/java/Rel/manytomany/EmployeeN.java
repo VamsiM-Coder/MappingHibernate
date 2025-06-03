@@ -17,6 +17,7 @@ public class EmployeeN {
 //    You want to control the name of the join table.
 //    You want to control the column names in the join table.
 //    You want better clarity in your database schema.
+    // This is optional
     @JoinTable(
             name = "employee_laptop", // Join table
             joinColumns = @JoinColumn(name = "emp_id"),

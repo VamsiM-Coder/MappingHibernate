@@ -2,7 +2,7 @@ Hibernate SQL Relationship Mapping Overview :
 
 In this project, we use Hibernate ORM to map Java entities to a MySQL relational database using various types of relationships. These mappings follow standard JPA annotations to define how entities relate to each other. Here's a summary of the key relationship types used:
 
- >  One-to-One (@OneToOne)
+ >  One-to-One (@OneToOne) :
 
        > Represents a one-to-one relationship between two entities.
        > Each row in one table corresponds to exactly one row in another table.
@@ -14,7 +14,7 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
          
        > Use Case: A User has exactly one UserProfile.
 
-  >  One-to-Many (@OneToMany) & Many-to-One (@ManyToOne)
+  >  One-to-Many (@OneToMany) & Many-to-One (@ManyToOne) :
  
        > Represents a parent-child relationship where one entity is related to many others.
        > In database terms, the "many" side has a foreign key to the "one" side.
@@ -30,7 +30,7 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
        
        > Use Case: A User can own multiple Repositories.
 
-   >  Many-to-Many (@ManyToMany)
+   >  Many-to-Many (@ManyToMany) :
 
        > Represents a relationship where many entities can be related to many others.
        > Requires a join table in the database to manage the association.

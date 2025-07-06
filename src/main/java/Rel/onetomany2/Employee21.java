@@ -14,7 +14,7 @@ public class Employee21 {
     private Double empSalary;
     private String department;
 
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL) //Interlinkage done by this entity.
     private List<Laptop21> laps;
 
     // Getters and Setters

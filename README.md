@@ -45,7 +45,7 @@ In this project, we use Hibernate ORM to map Java entities to a MySQL relational
       
       > Use Case: A Repository can be starred by many Users, and a User can star many Repositories.
 
-Summary :
+Conclusion:
 
     > One-to-One	@OneToOne	Foreign Key	User ↔ UserProfile
     > One-to-Many	@OneToMany	Foreign Key (on Many)	User → Repositories
